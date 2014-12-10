@@ -1,0 +1,21 @@
+gems:
+  - jekyll-mentions
+  - jekyll-sitemap
+
+footer-links:
+  github: nicolasbock
+
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile']
+
+pages_list:
+  Main: "/pages-test/"
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+url: http://www.freeon.org/blog
+baseurl: /pages-test
