@@ -2,4 +2,6 @@
 title: Test page
 ---
 
-# This is just a test...
+# Test
+
+This is just a test...
