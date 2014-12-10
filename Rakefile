@@ -20,6 +20,7 @@ task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
     system "mv _site/* #{tmp}"
     system "git remote update"
+    system "git stash"
     system "git checkout gh-pages"
     system "git rebase origin/gh-pages"
     system "git rm -r ."
@@ -30,6 +31,7 @@ task :publish => [:generate] do
     system "git commit -am #{message.shellescape}"
     system "git push"
     system "git checkout master"
+    system "git stash pop"
   end
 end
 
