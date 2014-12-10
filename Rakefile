@@ -21,7 +21,7 @@ task :publish => [:generate] do
     system "mv _site/* #{tmp}"
     system "git remote update"
     system "git checkout gh-pages"
-    system "git rebase"
+    system "git rebase origin/gh-pages"
     system "git rm -r ."
     system "rm -rf *"
     system "mv #{tmp}/* ."
