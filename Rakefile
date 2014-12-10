@@ -22,7 +22,7 @@ task :publish => [:generate] do
     system "git remote update"
     system "git stash"
     system "git checkout gh-pages"
-    system "git rebase origin/gh-pages"
+    system "git reset --hard origin/gh-pages"
     system "git rm -r ."
     system "rm -rf *"
     system "mv #{tmp}/* ."
